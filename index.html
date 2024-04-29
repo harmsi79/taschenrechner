@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Taschenrechner</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
   </head>
   <body>
-    <div id="result">0</div>
-    <div id="inputKeys">
-      <button id="7">7</button>
-      <button id="8">8</button>
-      <button id="9">9</button>
-      <button id="/">/</button><br />
-      <button id="4">4</button>
-      <button id="5">5</button>
-      <button id="6">6</button>
-      <button id="*">*</button><br />
-      <button id="1">1</button>
-      <button id="2">2</button>
-      <button id="3">3</button>
-      <button id="-">-</button><br />
-      <button id="ce">CE</button>
-      <button id="0">0</button>
-      <button id="=">=</button>
-      <button id="+">+</button>
+    <div class="wrapper">
+      <div class="calculater">
+        <div id="ausgabe"></div>
+        <table>
+          <tr>
+            <td onclick="insert(7)">7</td>
+            <td onclick="insert(8)">8</td>
+            <td onclick="insert(9)">9</td>
+            <td onclick="insert('/')">/</td>
+          </tr>
+          <tr>
+            <td onclick="insert(4)">4</td>
+            <td onclick="insert(5)">5</td>
+            <td onclick="insert(6)">6</td>
+            <td onclick="insert('*')">*</td>
+          </tr>
+          <tr>
+            <td onclick="insert(1)">1</td>
+            <td onclick="insert(2)">2</td>
+            <td onclick="insert(3)">3</td>
+            <td onclick="insert('-')">-</td>
+          </tr>
+          <tr>
+            <td onclick="ce()">CE</td>
+            <td onclick="insert(0)">0</td>
+            <td onclick="calculate()" id="enter">=</td>
+            <td onclick="insert('+')">+</td>
+          </tr>
+        </table>
+      </div>
+      <div id="list"></div>
     </div>
-    <div id="course">Placeholder</div>
-
-    <script src="app.js"></script>
   </body>
 </html>
